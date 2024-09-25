@@ -1,0 +1,15 @@
+server:
+  error:
+    include-binding-errors: always
+    include-exception: true
+    include-message: always
+  port: ${my.app.port:10000}
+spring:
+  application:
+    name: order
+  config:
+    import: configserver:http://127.0.0.1:8888
+turkcell:
+  error:
+    microservice: order
+    bounded-context: order-bc
