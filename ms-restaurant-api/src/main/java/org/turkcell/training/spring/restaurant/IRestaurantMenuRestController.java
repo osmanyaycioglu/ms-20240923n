@@ -8,9 +8,8 @@ import org.turkcell.training.spring.restaurant.models.MealsDto;
 import org.turkcell.training.spring.restaurant.models.PriceInfoDto;
 
 
-@RequestMapping("/api/v1/restaurant/menu")
 public interface IRestaurantMenuRestController {
 
-    @PostMapping("/get/price")
+    @PostMapping("/api/v1/restaurant/menu/get/price")
     PriceInfoDto getPrice(@RequestBody MealsDto mealsParam);
 }
