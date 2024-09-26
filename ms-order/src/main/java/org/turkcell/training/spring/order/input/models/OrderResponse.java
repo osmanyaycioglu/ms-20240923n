@@ -8,4 +8,5 @@ import java.time.LocalDateTime;
 public class OrderResponse {
     private String orderId;
     private LocalDateTime estimation;
+    private String desc;
 }

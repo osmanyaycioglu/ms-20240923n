@@ -12,10 +12,11 @@ import java.util.List;
 
 @Data
 public class Order {
+    private String orderId;
     private String name;
     private String surname;
     private String        phoneNumber;
-    private List<MealDto> meals;
+    private List<Meal> meals;
     private LocalDateTime scheduleTime;
     private Long customerId;
     private EOrderStatus orderStatus;

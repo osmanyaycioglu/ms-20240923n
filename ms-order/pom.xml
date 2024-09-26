@@ -81,6 +81,11 @@
             <artifactId>mapstruct</artifactId>
             <version>1.6.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.turkcell.training.spring</groupId>
+            <artifactId>ms-restaurant-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -125,7 +130,7 @@
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
-                            <version>1.18.34</version>
+                            <version>${lombok.version}</version>
                         </path>
                         <path>
                             <groupId>org.projectlombok</groupId>

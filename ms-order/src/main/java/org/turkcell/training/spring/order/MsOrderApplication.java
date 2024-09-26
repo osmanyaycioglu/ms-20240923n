@@ -14,6 +14,7 @@ import org.turkcell.training.spring.mscommon.error.ErrorConfig;
 public class MsOrderApplication {
 
     public static void main(String[] args) {
+        Class<MsOrderApplication> msOrderApplicationClassLoc = MsOrderApplication.class;
         SpringApplication.run(MsOrderApplication.class,
                               args);
     }
