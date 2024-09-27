@@ -13,3 +13,22 @@ turkcell:
   error:
     microservice: order
     bounded-context: order-bc
+resilience4j:
+  retry:
+    instances:
+      restaurant-menu-get-price:
+        base-config: common-restaurant
+        result-predicate: org.turkcell.training.spring.order.integration.resiliency.RestaurantMenuGetPriceResponseChecher
+      restaurant-menu-get-price2:
+        base-config: common-restaurant
+      restaurant-menu-get-price-feign:
+        base-config: common-restaurant
+        result-predicate: org.turkcell.training.spring.order.integration.resiliency.RestaurantMenuGetPriceResponseChecher
+    configs:
+      common-restaurant:
+        max-attempts: 3
+        wait-duration: 2ms
+        exponential-backoff-multiplier: 2
+        exponential-max-wait-duration: 5ms
+        enable-exponential-backoff: true
+        retry-exception-predicate: org.turkcell.training.spring.order.integration.resiliency.RestaurantMenuGetPriceRetryChooser

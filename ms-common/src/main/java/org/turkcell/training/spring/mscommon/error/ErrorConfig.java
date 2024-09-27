@@ -17,4 +17,9 @@ public class ErrorConfig {
         return new ErrorAdvice(errorProperties());
     }
 
+    @Bean
+    public FeignErrorHandler feignErrorHandler(){
+        return new FeignErrorHandler();
+    }
+
 }
